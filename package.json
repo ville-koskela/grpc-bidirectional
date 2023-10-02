@@ -1,0 +1,21 @@
+{
+  "name": "grpc-bidirectional",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:server": "ts-node src/server.ts",
+    "start:client": "ts-node src/client.ts",
+    "build:proto": "rm -rf src/generated && buf generate"
+  },
+  "author": "Ville Koskela",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "1.9.4",
+    "prompts": "2.4.2"
+  },
+  "devDependencies": {
+    "@terveystalo/tsconfig-spine": "3.1.2",
+    "@types/prompts": "2.4.5",
+    "ts-node": "10.9.1"
+  }
+}

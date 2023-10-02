@@ -1,0 +1,12 @@
+version: v1
+
+plugins:
+  - plugin: buf.build/community/stephenh-ts-proto
+    out: src/generated
+    opt:
+      - stringEnums=true
+      - returnObservables=true
+      - lowerCaseServiceMethods=true
+      - addGrpcMetadata=true
+      - outputServices=grpc-js
+      - esModuleInterop=true

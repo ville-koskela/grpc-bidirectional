@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package oh.my.v1;
+
+service PatientService  {
+  rpc GetPatient(stream GetPatientRequest) returns (stream GetPatientResponse);
+}
+
+message GetPatientRequest {
+  PatientId patient_id = 1;
+  RequestAudience audience = 2;
+}
+
+message GetPatientResponse {
+  Patient patient = 1;
+}
+
+message RequestAudience {
+  string audience_id = 1;
+}
+
+message PatientId {
+  string patient_id = 1;
+}
+
+message PatientName {
+  string given = 1;
+  string family = 2;
+  string text = 3;
+}
+
+message Patient {
+  PatientId id = 1;
+  PatientName name = 2;
+}
